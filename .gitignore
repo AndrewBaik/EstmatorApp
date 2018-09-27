@@ -15,10 +15,12 @@ __pycache__/
 
 # C extensions
 *.so
+# hah
 
 # Distribution / packaging
 .Python
 env/
+.env
 build/
 develop-eggs/
 dist/
