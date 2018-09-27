@@ -47,19 +47,19 @@ class LiveServerSplinterAuthTest(LiveServerTestCase):
         self.browser.fill('password', password)
         self.browser.find_by_value('Log in').first.click()
 
-    def test_redirected_to_menu_after_login(self):
-        self.assertTrue(self.browser.is_text_present('Select An Option'))
+    # def test_redirected_to_menu_after_login(self):
+    #     self.assertTrue(self.browser.is_text_present('Select An Option'))
 
-    def test_new_quote_button(self):
-        self.browser.visit('{}{}'.format(
-            self.live_server_url, '/menu')
-        )
-        new_quote_visible = self.browser.find_by_id('new_quote').visible
-        self.assertFalse(new_quote_visible)
+    # def test_new_quote_button(self):
+    #     self.browser.visit('{}{}'.format(
+    #         self.live_server_url, '/menu')
+    #     )
+    #     new_quote_visible = self.browser.find_by_id('new_quote').visible
+    #     self.assertFalse(new_quote_visible)
 
-        self.browser.find_by_id('btn_new_quote').click()
-        self.assertTrue(self.browser.is_text_present('New Quote'))
-        sleep(1)
-        new_quote_visible = self.browser.find_by_id('new_quote').visible
-        self.assertTrue(new_quote_visible)
+    #     self.browser.find_by_id('btn_new_quote').click()
+    #     self.assertTrue(self.browser.is_text_present('New Quote'))
+    #     sleep(1)
+    #     new_quote_visible = self.browser.find_by_id('new_quote').visible
+    #     self.assertTrue(new_quote_visible)
 
